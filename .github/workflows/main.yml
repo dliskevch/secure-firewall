@@ -13,3 +13,6 @@ jobs:
 
       - name: cdk help
         run: cdktf help
+
+      - name: cdktf version
+        run: cdktf --version
