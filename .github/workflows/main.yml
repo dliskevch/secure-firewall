@@ -5,14 +5,29 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
-    runs-on: self-hosted
+#   deploy:
+#     runs-on: self-hosted
 
+#     steps:
+# #      - uses: actions/checkout@v2
+
+#       - name: cdk help
+#         run: cdktf help
+
+#       - name: cdktf version
+#         run: cdktf --version
+  build:
+
+    runs-on: ubuntu-latest
     steps:
-#      - uses: actions/checkout@v2
-
-      - name: cdk help
-        run: cdktf help
-
-      - name: cdktf version
-        run: cdktf --version
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Test with Checkov
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: secure-firewall/ASA/AWS/Terraform/ASA_A_A_Multiple_AZ
+          framework: terraform 
