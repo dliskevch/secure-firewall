@@ -29,5 +29,5 @@ jobs:
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: secure-firewall/ASA/AWS/Terraform/ASA_A_A_Multiple_AZ
+          directory: ASA/AWS/Terraform/ASA_A_A_Multiple_AZ
           framework: terraform 
