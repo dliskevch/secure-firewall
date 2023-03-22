@@ -34,7 +34,7 @@ jobs:
           
       - name: Test with Checkov Azure
         if: always()
-        id: checkov
+        id: checkov1
         uses: bridgecrewio/checkov-action@master
         with:
           directory: FMC/Azure/Terraform/standalone
