@@ -1,4 +1,4 @@
-name: terraform-cdk-version
+name: Test infrastructure (Checkov)
 
 on:
   push:
