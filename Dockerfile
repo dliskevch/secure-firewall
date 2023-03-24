@@ -18,6 +18,8 @@ FROM quay.io/terraform-docs/terraform-docs:0.16.0
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 
 RUN set -x \
+    &&apk add -X https://nl.alpinelinux.org/alpine/edge/main -u alpine-keys --allow-untrusted\
+    && apk update \
     && apk add --no-cache \
         bash \
         git \
