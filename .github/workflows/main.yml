@@ -54,7 +54,7 @@ jobs:
           VERSION=$(grep "docker://quay.io/terraform-docs/gh-actions" action.yml | cut -d: -f4 | sed 's/"//g')
           docker build --pull --tag quay.io/terraform-docs/gh-actions:${VERSION} .
       - name: Should generate USAGE.md for tf11_basic
-        uses: ./
+        uses: actions/checkout@v2
         with:
           working-dir: FMC/Azure/Terraform/standalone
           output-file: USAGE.md
