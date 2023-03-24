@@ -69,7 +69,7 @@ jobs:
             <!-- END_TF_DOCS -->
           indention: 3    
       - name: Should generate README.md for tf12_inject and push up all changes
-        uses: ./
+        uses: actions/checkout@v2
         with:
           working-dir: FMC/Azure/Terraform/standalone
           args: --sort-by required
