@@ -47,7 +47,7 @@ jobs:
         ref: main
 
     - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
-      uses: actions/checkout@v2
+      uses: Dirrk/terraform-docs@v1.0.8
       with:
         tf_docs_working_dir: FMC/Azure/Terraform/standalone
         tf_docs_output_file: USAGE.md
