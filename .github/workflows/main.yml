@@ -44,7 +44,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.event.pull_request.head.ref }}
+        ref: main
 
     - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
       uses: actions/checkout@v2
