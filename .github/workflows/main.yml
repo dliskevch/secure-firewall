@@ -2,7 +2,7 @@ name: Test infrastructure (Checkov)
 
 on:
   push:
-    branches: [ ** ]
+    branches: "**"
 
 jobs:
 #   deploy:
