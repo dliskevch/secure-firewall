@@ -42,6 +42,9 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
+    - name: Branch name
+      run: echo running on branch ${GITHUB_REF##*/}
+
     - uses: actions/checkout@v2
       with:
         ref: ${GITHUB_REF##*/}
