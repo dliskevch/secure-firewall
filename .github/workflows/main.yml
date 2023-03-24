@@ -44,7 +44,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${{GITHUB_REF##*/}}
+        ref: ${GITHUB_REF##*/}
 
     - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
       uses: Dirrk/terraform-docs@v1.0.8
