@@ -36,7 +36,8 @@ jobs:
         if: always()
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: FMC/Azure/Terraform/standalone
+#           directory: ASA/AWS/Terraform/ASA_A_A_Multiple_AZ
+          directory: .
           framework: terraform 
   
   docs:
