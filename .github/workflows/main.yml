@@ -66,7 +66,7 @@ jobs:
         uses: dflook/terraform-validate@v1
         id: validate
         with:
-          path: .
+          path: ASA/AWS/Terraform/ASA_A_A_Multiple_AZ
 
       - name: Validate failed
         if: ${{ failure() && steps.validate.outputs.failure-reason == 'validate-failed' }}
